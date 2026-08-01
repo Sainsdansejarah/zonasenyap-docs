@@ -1,0 +1,13 @@
+name = "Zonasenyap"
+license = "MIT"
+licenselink = "https://github.com/zonasenyap"
+description = "Professional and minimal theme for science and history documentation"
+homepage = "https://github.com/zonasenyap"
+demosite = "https://zonasenyap.github.io"
+tags = ["blog", "documentation", "minimal", "responsive", "dark-mode"]
+features = ["blog", "dark-mode", "responsive", "fast"]
+min_version = "0.100.0"
+
+[author]
+name = "Zona Senyap"
+homepage = "https://www.youtube.com/@Zonasenyap1"

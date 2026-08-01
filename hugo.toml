@@ -1,0 +1,22 @@
+baseURL = "https://Sainsdansejarah.github.io/zonasenyap-docs/"
+languageCode = "id"
+title = "Sains dan Sejarah"
+theme = "zonasenyap"
+
+[params]
+  description = "Dokumentasi edukatif tentang sains, teknologi, sejarah dunia, peradaban, tokoh berpengaruh, penemuan, dan peristiwa penting."
+  author = "Zona Senyap"
+  
+[markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ''
+    hl_inline = false
+    lineAnchors = ''
+    lineNos = false
+    lineNumbersInTable = false
+    noClasses = true
+    style = 'monokai'
+    tabWidth = 4

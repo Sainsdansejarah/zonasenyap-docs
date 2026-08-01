@@ -1,0 +1,49 @@
+{{ define "main" }}
+<article class="post-single">
+  <div class="container">
+    <header class="post-header">
+      <div class="post-meta">
+        {{ range .Params.categories }}<span class="post-category">{{ . }}</span>{{ end }}
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
+        <span class="post-reading-time">{{ math.Ceil (div (len .Plain) 200) }} menit baca</span>
+      </div>
+      <h1>{{ .Title }}</h1>
+      <p class="post-description">{{ .Params.description }}</p>
+    </header>
+
+    <div class="post-content">
+      {{ .Content }}
+    </div>
+
+    {{ if .Params.tags }}
+    <footer class="post-footer">
+      <div class="tags">
+        <strong>Tag:</strong>
+        {{ $baseURL := .Site.BaseURL }}
+        {{ range .Params.tags }}
+        <a href="{{ $baseURL }}tags/{{ . | urlize }}/" class="tag">#{{ . }}</a>
+        {{ end }}
+      </div>
+    </footer>
+    {{ end }}
+  </div>
+
+  <nav class="post-navigation">
+    <div class="container">
+      {{ $currentNode := . }}
+      {{ if .PrevInSection }}
+      <div class="nav-prev">
+        <span>← Artikel Sebelumnya</span>
+        <a href="{{ .PrevInSection.Permalink }}">{{ .PrevInSection.Title }}</a>
+      </div>
+      {{ end }}
+      {{ if .NextInSection }}
+      <div class="nav-next">
+        <span>Artikel Berikutnya →</span>
+        <a href="{{ .NextInSection.Permalink }}">{{ .NextInSection.Title }}</a>
+      </div>
+      {{ end }}
+    </div>
+  </nav>
+</article>
+{{ end }}

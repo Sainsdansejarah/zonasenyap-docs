@@ -1,0 +1,62 @@
+{{ define "main" }}
+<section class="hero">
+  <div class="hero-content">
+    <h1>Sains dan Sejarah</h1>
+    <p class="subtitle">Jelajahi dunia pengetahuan melalui artikel edukatif tentang sains, teknologi, dan sejarah dunia</p>
+    <div class="cta-buttons">
+      <a href="{{ .Site.BaseURL }}posts/" class="btn btn-primary">Baca Artikel</a>
+      <a href="https://www.youtube.com/@Zonasenyap1" class="btn btn-secondary" target="_blank">Kunjungi YouTube</a>
+    </div>
+  </div>
+</section>
+
+<section class="latest-posts">
+  <div class="container">
+    <h2>Artikel Terbaru</h2>
+    <div class="posts-grid">
+      {{ range first 6 (where .Site.RegularPages "Type" "posts") }}
+      <article class="post-card">
+        <div class="post-header">
+          <span class="post-category">{{ range .Params.categories }}{{ . }}{{ end }}</span>
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
+        </div>
+        <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+        <p class="post-excerpt">{{ .Summary }}</p>
+        <a href="{{ .Permalink }}" class="read-more">Baca Selengkapnya →</a>
+      </article>
+      {{ end }}
+    </div>
+    <div class="view-all">
+      <a href="{{ .Site.BaseURL }}posts/" class="btn btn-outline">Lihat Semua Artikel</a>
+    </div>
+  </div>
+</section>
+
+<section class="categories">
+  <div class="container">
+    <h2>Kategori Populer</h2>
+    <div class="categories-grid">
+      <div class="category-card">
+        <span class="icon">🔬</span>
+        <h3>Sains</h3>
+        <p>Penemuan ilmiah dan penjelasan fenomena alam</p>
+      </div>
+      <div class="category-card">
+        <span class="icon">⚙️</span>
+        <h3>Teknologi</h3>
+        <p>Inovasi dan perkembangan teknologi modern</p>
+      </div>
+      <div class="category-card">
+        <span class="icon">🏛️</span>
+        <h3>Sejarah</h3>
+        <p>Peristiwa bersejarah dan tokoh berpengaruh</p>
+      </div>
+      <div class="category-card">
+        <span class="icon">🌍</span>
+        <h3>Peradaban</h3>
+        <p>Perkembangan peradaban manusia sepanjang masa</p>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
