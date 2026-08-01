@@ -1,5 +1,31 @@
 {{ define "main" }}
 <section class="hero">
+  <div class="hero-illustration">
+    <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+      <!-- Books -->
+      <rect x="20" y="80" width="40" height="60" fill="#3b82f6" rx="4" opacity="0.8"/>
+      <rect x="25" y="85" width="30" height="50" fill="#2563eb" rx="2"/>
+      <rect x="30" y="50" width="40" height="60" fill="#8b5cf6" rx="4" opacity="0.8"/>
+      <rect x="35" y="55" width="30" height="50" fill="#7c3aed" rx="2"/>
+      <rect x="75" y="70" width="40" height="60" fill="#ec4899" rx="4" opacity="0.8"/>
+      <rect x="80" y="75" width="30" height="50" fill="#db2777" rx="2"/>
+
+      <!-- Magnifying glass -->
+      <circle cx="200" cy="100" r="35" fill="none" stroke="#3b82f6" stroke-width="3"/>
+      <line x1="230" y1="130" x2="255" y2="155" stroke="#3b82f6" stroke-width="3"/>
+      <circle cx="200" cy="100" r="25" fill="none" stroke="#2563eb" stroke-width="2" opacity="0.5"/>
+
+      <!-- Light bulb -->
+      <circle cx="145" cy="40" r="12" fill="#f59e0b"/>
+      <rect x="140" y="50" width="10" height="8" fill="#94a3b8"/>
+      <rect x="137" y="58" width="16" height="4" fill="#94a3b8"/>
+
+      <!-- Decorative elements -->
+      <circle cx="260" cy="50" r="8" fill="#10b981" opacity="0.6"/>
+      <circle cx="40" cy="30" r="6" fill="#8b5cf6" opacity="0.5"/>
+      <circle cx="100" cy="150" r="7" fill="#ec4899" opacity="0.5"/>
+    </svg>
+  </div>
   <div class="hero-content">
     <h1>Sains dan Sejarah</h1>
     <p class="subtitle">Jelajahi dunia pengetahuan melalui artikel edukatif tentang sains, teknologi, dan sejarah dunia</p>
@@ -16,6 +42,51 @@
     <div class="posts-grid">
       {{ range first 6 (where .Site.RegularPages "Type" "posts") }}
       <article class="post-card">
+        <div class="post-featured">
+          {{ if contains .Title "Fotosintesis" }}
+          <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg" class="featured-illustration">
+            <!-- Sun -->
+            <circle cx="160" cy="20" r="15" fill="#fbbf24"/>
+            <line x1="160" y1="2" x2="160" y2="-10" stroke="#fbbf24" stroke-width="2"/>
+            <line x1="180" y1="20" x2="192" y2="20" stroke="#fbbf24" stroke-width="2"/>
+            <!-- Leaf -->
+            <ellipse cx="60" cy="70" rx="25" ry="35" fill="#10b981" transform="rotate(-30 60 70)"/>
+            <ellipse cx="100" cy="80" rx="25" ry="35" fill="#059669" transform="rotate(30 100 80)"/>
+            <!-- Water droplets -->
+            <circle cx="30" cy="100" r="4" fill="#3b82f6"/>
+            <circle cx="50" cy="110" r="4" fill="#60a5fa"/>
+            <!-- Oxygen bubbles -->
+            <circle cx="140" cy="90" r="5" fill="#a78bfa"/>
+            <circle cx="160" cy="100" r="4" fill="#c4b5fd"/>
+          </svg>
+          {{ else if contains .Title "Mesir" }}
+          <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg" class="featured-illustration">
+            <!-- Pyramid -->
+            <polygon points="100,20 150,100 50,100" fill="#f59e0b"/>
+            <polygon points="100,20 140,90 60,90" fill="#fbbf24"/>
+            <!-- Sand -->
+            <rect x="40" y="100" width="120" height="20" fill="#d97706"/>
+            <!-- Sun -->
+            <circle cx="170" cy="30" r="12" fill="#fbbf24"/>
+            <!-- Palm tree -->
+            <rect x="15" y="80" width="4" height="20" fill="#92400e"/>
+            <circle cx="17" cy="70" r="10" fill="#10b981"/>
+          </svg>
+          {{ else }}
+          <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg" class="featured-illustration">
+            <!-- Book stack -->
+            <rect x="20" y="60" width="50" height="40" fill="#3b82f6" rx="3"/>
+            <rect x="30" y="50" width="50" height="40" fill="#8b5cf6" rx="3"/>
+            <rect x="40" y="40" width="50" height="40" fill="#ec4899" rx="3"/>
+            <!-- Quill -->
+            <line x1="120" y1="30" x2="140" y2="90" stroke="#10b981" stroke-width="3"/>
+            <ellipse cx="142" cy="92" rx="3" ry="8" fill="#10b981"/>
+            <!-- Sparkles -->
+            <circle cx="150" cy="50" r="2" fill="#fbbf24"/>
+            <circle cx="160" cy="70" r="2" fill="#fbbf24"/>
+          </svg>
+          {{ end }}
+        </div>
         <div class="post-header">
           <span class="post-category">{{ range .Params.categories }}{{ . }}{{ end }}</span>
           <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
