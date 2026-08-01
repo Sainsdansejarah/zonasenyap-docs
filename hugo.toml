@@ -1,7 +1,11 @@
 baseURL = "https://Sainsdansejarah.github.io/zonasenyap-docs/"
-languageCode = "id"
 title = "Sains dan Sejarah"
 theme = "zonasenyap"
+defaultContentLanguage = "id"
+
+[languages]
+[languages.id]
+  locale = "id_ID"
 
 [params]
   description = "Dokumentasi edukatif tentang sains, teknologi, sejarah dunia, peradaban, tokoh berpengaruh, penemuan, dan peristiwa penting."
