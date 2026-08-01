@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Categories on Sains dan Sejarah</title>
+		<link>https://Sainsdansejarah.github.io/zonasenyap-docs/categories/</link>
+		<description>Recent content in Categories on Sains dan Sejarah</description>
+		<generator>Hugo</generator>
+		<language>id_ID</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 20 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://Sainsdansejarah.github.io/zonasenyap-docs/categories/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Biologi</title>
+				<link>https://Sainsdansejarah.github.io/zonasenyap-docs/categories/biologi/</link>
+				<pubDate>Mon, 20 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://Sainsdansejarah.github.io/zonasenyap-docs/categories/biologi/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Sains</title>
+				<link>https://Sainsdansejarah.github.io/zonasenyap-docs/categories/sains/</link>
+				<pubDate>Mon, 20 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://Sainsdansejarah.github.io/zonasenyap-docs/categories/sains/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Sejarah</title>
+				<link>https://Sainsdansejarah.github.io/zonasenyap-docs/categories/sejarah/</link>
+				<pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://Sainsdansejarah.github.io/zonasenyap-docs/categories/sejarah/</guid>
+				<description></description>
+			</item>
+	</channel>
+</rss>
